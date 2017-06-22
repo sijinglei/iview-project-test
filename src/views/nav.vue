@@ -87,6 +87,11 @@
             <Icon type="ios-analytics" :size="iconSize"></Icon>
             <span class="layout-text">后台管理</span></a>
           </Menu-item>
+          <Menu-item name="4">
+              <a class="menu-link" :class="{on:ison==4}" href="javascript:;"  @click="linkClick(4)">
+            <Icon type="ios-analytics" :size="iconSize"></Icon>
+            <span class="layout-text">ivew官网</span></a>
+          </Menu-item>
         </Menu>
       </i-col>
       <i-col :span="spanRight">

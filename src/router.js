@@ -29,6 +29,12 @@ const routers = [{
                 title: ''
             },
             component: (resolve) => require(['./views/temp3.vue'], resolve)
+        }, {
+            path: '/temp4',
+            meta: {
+                title: ''
+            },
+            component: (resolve) => require(['./views/temp4.vue'], resolve)
         }]
     }
 ];

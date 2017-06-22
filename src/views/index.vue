@@ -1,65 +1,107 @@
 <style scoped lang="less">
-    .index{
+    .index {
+    
         width: 100%;
+    
         position: absolute;
+    
         top: 0;
+    
         bottom: 0;
+    
         left: 0;
         text-align: center;
-        h1{
+        h1 {
             height: 150px;
-            img{
+            img {
                 height: 100%;
             }
         }
-        h2{
+        h2 {
             color: #666;
             margin-bottom: 200px;
-            p{
+            p {
                 margin: 0 0 50px;
             }
         }
-        .ivu-row-flex{
+    
+        .ivu-row-flex {
+    
             height: 100%;
+    
         }
+    
     }
 </style>
 <template>
     <div class="index">
+    
         <Row type="flex" justify="center" align="middle">
+    
             <Col span="24">
-                <h1>
-                    <img src="../images/logo.png">
-                </h1>
-                <h2>
-                    <p>Welcome to your iView app!</p>
-                    <Button type="ghost" @click="handleStart">Start iView</Button>
-                </h2>
+    
+            <h1>
+    
+                <img src="../images/logo.png">
+    
+            </h1>
+    
+            <h2>
+    
+                <p>Welcome to your iView app!</p>
+    
+                <Button type="ghost" @click="handleStart">Start iView</Button>
+    
+            </h2>
+    
             </Col>
+    
         </Row>
+    
     </div>
 </template>
 <script>
     export default {
+    
         methods: {
-            handleStart () {
-                var vm=this;
+    
+            handleStart() {
+    
+                var vm = this;
+    
                 // this.$Modal.info({
+    
                 //     title: 'Bravo',
+    
                 //     content: 'Now, enjoy the convenience of iView.'
+    
                 // });
-                   vm.$Modal.confirm({
+    
+                vm.$Modal.confirm({
+    
                     title: '开始ivew',
+    
                     content: '<p>一些对话框内容</p><p>一些对话框内容</p>',
+    
                     onOk: () => {
+    
                         console.log(vm);
+    
                         vm.$router.push('nav');
+    
                     },
+    
                     onCancel: () => {
+    
                         this.$Message.info('点击了取消');
+    
                     }
+    
                 });
+    
             }
+    
         }
+    
     }
 </script>
